@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Old Minehut",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": ["*://minehut.com/*"],
+            "js": ["bundle.js"],
+            "css": ["bundle.css"]
+        }
+    ]
+}
