@@ -6,7 +6,10 @@
         "build": "rollup -c",
         "watch": "rollup -c -w"
     },
-    "dependencies": {},
+    "dependencies": {
+        "svelte": "^3.52.0",
+        "svelte-navigator": "^3.2.2"
+    },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^23.0.2",
         "@rollup/plugin-node-resolve": "^15.0.1",
@@ -16,7 +19,6 @@
         "rollup": "^3.2.5",
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-svelte": "^7.1.0",
-        "svelte": "^3.52.0",
         "svelte-preprocess": "^4.10.7",
         "tailwindcss": "^3.2.2",
         "tslib": "^2.4.1",
