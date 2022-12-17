@@ -8,9 +8,8 @@
         ],
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "node",
-        "rootDir": "src",
         "outDir": "dist"
     },
-    "include": ["src"],
+    "include": ["src", "lib"],
     "exclude": ["node_modules"]
 }

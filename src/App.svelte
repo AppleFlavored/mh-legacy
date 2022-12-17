@@ -1,10 +1,18 @@
-<div class="flex items-center justify-center h-screen">
-    <p class="text-lg p-8">
-        Loaded Svelte and
-        <span class="text-xl text-blue-500">Tailwind</span>
-        :sunglasses:
-    </p>
-</div>
+<script lang="ts">
+    import { Route, Router } from "svelte-navigator";
+    import Layout from "./Layout.svelte";
+</script>
+
+<Layout>
+    <Router>
+        <Route path='/'>
+            <p>Homepage</p>
+        </Route>
+        <Route path='dashboard/home'>
+            <p>Dashboard Home</p>
+        </Route>
+    </Router>
+</Layout>
 
 <style global>
     @tailwind base;

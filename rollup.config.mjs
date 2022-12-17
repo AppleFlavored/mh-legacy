@@ -4,22 +4,35 @@ import typescript from "@rollup/plugin-typescript";
 import autoPreprocess from 'svelte-preprocess';
 import postcss from 'rollup-plugin-postcss';
 
-export default {
-    input: 'src/setup.ts',
-    output: {
-        file: 'dist/bundle.js',
-        format: 'iife'
+/** @type {import('rollup').RollupOptions[]} */
+export default [
+    {
+        input: 'lib/background.ts',
+        output: {
+            file: 'dist/background.js',
+            format: 'iife'
+        },
+        plugins: [
+            typescript(),
+        ]
     },
-    plugins: [
-        svelte({
-            preprocess: autoPreprocess({
-                postcss: true,
+    {
+        input: 'src/setup.ts',
+        output: {
+            file: 'dist/bundle.js',
+            format: 'iife'
+        },
+        plugins: [
+            svelte({
+                preprocess: autoPreprocess({
+                    postcss: true,
+                }),
             }),
-        }),
-        typescript(),
-        postcss({
-            extract: 'bundle.css',
-        }),
-        resolve({ browser: true }),
-    ],
-};
+            typescript(),
+            postcss({
+                extract: 'bundle.css',
+            }),
+            resolve({ browser: true }),
+        ],
+    },
+];
