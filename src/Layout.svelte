@@ -1,8 +1,3 @@
-<script>
-    document.body.style.backgroundColor = "#171717";
-    document.body.style.fontFamily = "Roboto";
-</script>
-
 <nav class="flex items-center px-[16px] w-full h-[64px] bg-[#303030] text-[#c2c2c2]">
     <div class="w-[24px] h-[24px] flex items-center fill-[#c2c2c2] mr-[25px]">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 837.74">
